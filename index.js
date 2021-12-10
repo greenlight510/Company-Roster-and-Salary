@@ -134,3 +134,37 @@ function addRoles() {
       );
     });
 }
+function addEmployee() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "first_name",
+        message: "Please enter the first name of employee?",
+      },
+      {
+        type: "input",
+        name: "lname",
+        message: "Please enter the last name of employee?",
+      },
+      {
+        type: "input",
+        name: "role_id",
+        message: "Please enter a role ID for this employee?",
+      },
+      {
+        type: "input",
+        name: "manager_id",
+        message: "Please enter the manager id this employee reports to?",
+      },
+    ])
+    .then((userChoice) => {
+      db.query(
+        "INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)",[userChoice.first_name,userChoice.last_name,userChoice.role_id,userChoice.manager_id], function (err, res) {
+          if (err) throw err;
+          console.table(res);
+          appMenu();
+        }
+      );
+    });
+}
