@@ -33,6 +33,7 @@ function appMenu() {
           "add a role",
           "add an employee",
           "update an employee role",
+          "view budget for all departments",
           "Quit",
         ],
       },
@@ -59,6 +60,9 @@ function appMenu() {
           break;
         case "update an employee role":
           updateEmployeeRole();
+          break;
+        case "view budget for all departments":
+          deptBudget();
           break;
         default:
           db.end();
@@ -190,3 +194,12 @@ function updateEmployeeRole() {
             appMenu();    
     });
 }
+function deptBudget() {
+  var query = "SELECT name as Department, sum(role.salary) as 'Department Budget' FROM department LEFT JOIN role ON department.department_id = role.department_id GROUP BY name"
+  connection.query(query, function (err, res) {
+    if (err) throw err;
+    console.log("\n")
+    console.table(res);
+    setTimeout(start, 1000);
+  })
+};
