@@ -196,7 +196,7 @@ function updateEmployeeRole() {
 }
 function deptBudget() {
   var query = "SELECT name as Department, sum(role.salary) as 'Department Budget' FROM department LEFT JOIN role ON department.department_id = role.department_id GROUP BY name"
-  connection.query(query, function (err, res) {
+  db.query(query, function (err, res) {
     if (err) throw err;
     console.log("\n")
     console.table(res);
