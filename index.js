@@ -168,3 +168,25 @@ function addEmployee() {
       );
     });
 }
+function updateEmployeeRole() {
+  inquirer.prompt([
+    {
+      name: "employee",
+      type: "input",
+      message: "What is the employee id number?"
+    },
+    {
+      name: "role",
+      type: "input",
+      message: "What is the new role id number?"
+    }])
+    .then(function (update) {
+      console.log(update)
+      var query = `UPDATE employee SET role_id = ${update.role} WHERE id = ${update.employee}`;
+      db.query(query, function (err, res) {
+        if (err) throw err
+      });
+      console.log("\n" + "Please update the manager id" + "\n")
+            appMenu();    
+    });
+}
