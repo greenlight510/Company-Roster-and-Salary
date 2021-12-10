@@ -144,7 +144,7 @@ function addEmployee() {
       },
       {
         type: "input",
-        name: "lname",
+        name: "last_name",
         message: "Please enter the last name of employee?",
       },
       {
