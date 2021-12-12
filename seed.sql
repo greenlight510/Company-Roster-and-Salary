@@ -40,3 +40,23 @@ INSERT INTO role (title, salary, department_id)
 VALUES ("Chief Human Resources Officer",180000,6);
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES ("No", "Manager",0);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Old", "McDonald",2);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Jessica", "Princess",1,2);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Lisa-Marie", "Pressly",6);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Theodore", "Johnson",12);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Chris", "Holy",14);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Martin", "Lawrence",16);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("George", "Jefferson",20);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Jeff", "Log",19,8);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Jose", "Espinosa",24);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("John", "Walsh",23,10);
