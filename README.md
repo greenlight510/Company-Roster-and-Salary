@@ -42,6 +42,15 @@ To run tests, run the following:
 `
 No tests needed.
 `
+Sample of function Screenshots
+![image](https://user-images.githubusercontent.com/90018321/145734188-20b9c4b8-4c5f-45cf-a8f5-df54887a5576.png)
+
+View all departments
+![image](https://user-images.githubusercontent.com/90018321/145734231-f09b1500-0031-458f-bb67-82e515507600.png)
+
+View all Employees
+![image](https://user-images.githubusercontent.com/90018321/145734272-9357e5fa-5e62-4554-97e5-770b0b5881cd.png)
+
 
 ## Questions
 
